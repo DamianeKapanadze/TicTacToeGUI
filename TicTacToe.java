@@ -1,13 +1,10 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class TicTacToe extends JFrame implements ActionListener {
     int counter = 0;
-    List<Integer> Xindex = new ArrayList<>();
-    List<Integer> Oindex = new ArrayList<>();
+    
     private JButton[][] boardButtons;  //[][] two dimensional array 
    
     public TicTacToe() {
