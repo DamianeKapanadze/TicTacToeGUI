@@ -19,7 +19,7 @@ public class TicTacToe extends JFrame implements ActionListener {
 
         for (int row = 0; row < 3; row++){
             for (int col = 0; col < 3; col++){
-                boardButtons[row][col] = new JButton(Integer.toString(row*10 + col));
+                boardButtons[row][col] = new JButton(Integer.toString(row*3 + col));
                 boardPanel.add(boardButtons[row][col]);
                 boardButtons[row][col].addActionListener(this);
             }
@@ -41,8 +41,8 @@ public class TicTacToe extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         //System.out.println(e.getActionCommand() + " Selected "  + counter);
-        int x=Integer.parseInt(e.getActionCommand())/10;
-        int y=Integer.parseInt(e.getActionCommand())%10;
+        int x=Integer.parseInt(e.getActionCommand())/3;
+        int y=Integer.parseInt(e.getActionCommand())%3;
 
         if(counter%2==0){
             boardButtons[x][y].setText("X");
